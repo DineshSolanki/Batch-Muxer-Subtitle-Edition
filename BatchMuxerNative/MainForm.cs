@@ -70,15 +70,7 @@ namespace BatchMuxerNative
 
         private void txtFolderPath_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            FolderBrowserDialogEx dlg = new FolderBrowserDialogEx()
-            {
-                Title="Open Folder",
-               ShowEditbox = true
-            };
-            if (dlg.ShowDialog(this) == DialogResult.OK)
-            {
-                txtFolderPath.Text = dlg.SelectedPath;
-            }
+            
         }
 
         private void MainForm_DragEnter(object sender, DragEventArgs e)
@@ -122,6 +114,18 @@ namespace BatchMuxerNative
             MainForm_Load(null,EventArgs.Empty);
         }
 
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialogEx dlg = new FolderBrowserDialogEx()
+            {
+                Title = "Open Folder",
+                ShowEditbox = true
+            };
+            if (dlg.ShowDialog(this) == DialogResult.OK)
+            {
+                txtFolderPath.Text = dlg.SelectedPath;
+            }
+        }
         
     }
 }
