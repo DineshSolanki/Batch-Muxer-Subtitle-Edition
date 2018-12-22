@@ -49,9 +49,10 @@ namespace BatchMuxerNative
 
         private void btnMux_Click(object sender, EventArgs e)
         {
-            if (Functions.CheckPathAndLanguage(null,null,true))
+            if (Functions.CheckPathAndLanguage(txtFolderPath.Text,null,true))
             {
                 //txtFolderPath.Enabled = false;
+                Cursor = Cursors.WaitCursor;
                 progressBar1.Step = 1;
                 progressBar1.Style = ProgressBarStyle.Continuous;
                 progressBar1.Maximum = Globals.Fi.Length;
@@ -96,9 +97,11 @@ namespace BatchMuxerNative
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            
             //txtFolderPath.Enabled = true;
             if (Settings.Default.autoClean)
                 Functions.DeleteAndMove(txtFolderPath.Text);
+            Cursor = Cursors.Arrow;
         }
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
