@@ -35,13 +35,14 @@
             this.btnCleanUp = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnBrowse = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtFolderPath
             // 
             this.txtFolderPath.Location = new System.Drawing.Point(74, 13);
             this.txtFolderPath.Name = "txtFolderPath";
-            this.txtFolderPath.Size = new System.Drawing.Size(317, 20);
+            this.txtFolderPath.Size = new System.Drawing.Size(287, 20);
             this.txtFolderPath.TabIndex = 0;
             this.txtFolderPath.TextChanged += new System.EventHandler(this.txtFolderPath_TextChanged);
             this.txtFolderPath.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtFolderPath_MouseDoubleClick);
@@ -112,12 +113,23 @@
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
+            // btnBrowse
+            // 
+            this.btnBrowse.Location = new System.Drawing.Point(362, 12);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(30, 23);
+            this.btnBrowse.TabIndex = 6;
+            this.btnBrowse.Text = "...";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
             // MainForm
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 153);
+            this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.btnCleanUp);
             this.Controls.Add(this.btnMux);
@@ -148,6 +160,7 @@
         private System.Windows.Forms.Button btnCleanUp;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button btnBrowse;
 
     }
 }
