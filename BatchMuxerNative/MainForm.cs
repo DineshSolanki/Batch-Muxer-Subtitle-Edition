@@ -49,10 +49,9 @@ namespace BatchMuxerNative
 
         private void btnMux_Click(object sender, EventArgs e)
         {
-            if (Functions.CheckPathAndLanguage(txtFolderPath.Text,null,true))
+            if (Functions.CheckPathAndLanguage(null,null,true))
             {
                 //txtFolderPath.Enabled = false;
-                Cursor = Cursors.WaitCursor;
                 progressBar1.Step = 1;
                 progressBar1.Style = ProgressBarStyle.Continuous;
                 progressBar1.Maximum = Globals.Fi.Length;
@@ -71,7 +70,15 @@ namespace BatchMuxerNative
 
         private void txtFolderPath_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            
+            FolderBrowserDialogEx dlg = new FolderBrowserDialogEx()
+            {
+                Title="Open Folder",
+               ShowEditbox = true
+            };
+            if (dlg.ShowDialog(this) == DialogResult.OK)
+            {
+                txtFolderPath.Text = dlg.SelectedPath;
+            }
         }
 
         private void MainForm_DragEnter(object sender, DragEventArgs e)
@@ -97,11 +104,9 @@ namespace BatchMuxerNative
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            
             //txtFolderPath.Enabled = true;
             if (Settings.Default.autoClean)
                 Functions.DeleteAndMove(txtFolderPath.Text);
-            Cursor = Cursors.Arrow;
         }
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -115,6 +120,16 @@ namespace BatchMuxerNative
             SettingsForm s=new SettingsForm();
             s.ShowDialog();
             MainForm_Load(null,EventArgs.Empty);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
         }
 
         

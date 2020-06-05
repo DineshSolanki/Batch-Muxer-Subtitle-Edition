@@ -35,7 +35,6 @@
             this.chkAC = new System.Windows.Forms.CheckBox();
             this.chkSC = new System.Windows.Forms.CheckBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnBrowse = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -60,7 +59,7 @@
             // 
             this.txtMkvPath.Location = new System.Drawing.Point(115, 13);
             this.txtMkvPath.Name = "txtMkvPath";
-            this.txtMkvPath.Size = new System.Drawing.Size(229, 20);
+            this.txtMkvPath.Size = new System.Drawing.Size(262, 20);
             this.txtMkvPath.TabIndex = 2;
             this.txtMkvPath.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtMkvPath_MouseDoubleClick);
             // 
@@ -68,9 +67,9 @@
             // 
             this.cmbSubLanguage.DisplayMember = "Name";
             this.cmbSubLanguage.FormattingEnabled = true;
-            this.cmbSubLanguage.Location = new System.Drawing.Point(115, 58);
+            this.cmbSubLanguage.Location = new System.Drawing.Point(119, 58);
             this.cmbSubLanguage.Name = "cmbSubLanguage";
-            this.cmbSubLanguage.Size = new System.Drawing.Size(262, 21);
+            this.cmbSubLanguage.Size = new System.Drawing.Size(258, 21);
             this.cmbSubLanguage.TabIndex = 3;
             this.cmbSubLanguage.ValueMember = "Code";
             // 
@@ -104,22 +103,11 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnBrowse
-            // 
-            this.btnBrowse.Location = new System.Drawing.Point(347, 12);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(30, 23);
-            this.btnBrowse.TabIndex = 7;
-            this.btnBrowse.Text = "...";
-            this.btnBrowse.UseVisualStyleBackColor = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
-            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(389, 147);
-            this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.chkSC);
             this.Controls.Add(this.chkAC);
@@ -132,7 +120,7 @@
             this.MinimumSize = new System.Drawing.Size(405, 186);
             this.Name = "SettingsForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Settings";
+            this.Text = "SettingsForm";
             this.Load += new System.EventHandler(this.SettingsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -148,6 +136,5 @@
         private System.Windows.Forms.CheckBox chkAC;
         private System.Windows.Forms.CheckBox chkSC;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnBrowse;
     }
 }

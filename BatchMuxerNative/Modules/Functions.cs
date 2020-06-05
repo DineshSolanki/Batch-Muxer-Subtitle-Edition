@@ -15,10 +15,7 @@ namespace BatchMuxerNative.Modules
                 if (directRun & !string.IsNullOrEmpty(Settings.Default.mkvmergePATH) &
                     File.Exists(Settings.Default.mkvmergePATH + @"\mkvmerge.exe"))
                 {
-                    if (Directory.Exists(path) && !string.IsNullOrEmpty(path)) return true;
-                    MessageBox.Show("Folder is Empty!");
-                    return false;
-
+                    return true;
                 }
                 if (string.IsNullOrEmpty(path))
                 {

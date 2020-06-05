@@ -38,15 +38,11 @@ namespace BatchMuxerNative
 
         private void txtMkvPath_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-           
-        }
-
-        private void btnBrowse_Click(object sender, EventArgs e)
-        {
             FolderBrowserDialogEx folder = new FolderBrowserDialogEx
             {
                 Title = "locate mkvmerge.exe",
                 ShowEditbox = true,
+                StartPosition = FormStartPosition.CenterParent
             };
             if (folder.ShowDialog(this) == DialogResult.OK)
             {
