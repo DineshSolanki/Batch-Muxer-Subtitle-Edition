@@ -122,16 +122,6 @@ namespace BatchMuxerNative
             MainForm_Load(null,EventArgs.Empty);
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         
     }
 }
