@@ -1,3 +1,4 @@
+## [depereceted] This source is no longer mantained and updated, [Get updated WPF version here instead](https://github.com/DineshSolanki/BatchMuxer_Sub/tree/master "BatchMuxer-Subtitle WPF") 
 # Batch-Muxer-Subtitle-Edition
 This Application takes a folder and uses mkvmerge to automatically muxes(combines) all videos in the folder with their respective subtitle file. (must have same name).
 You can also define language of the subtitle
